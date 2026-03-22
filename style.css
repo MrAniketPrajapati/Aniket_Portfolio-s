@@ -1,0 +1,168 @@
+/* ==========================================
+   1. CSS RESET & VARIABLES
+   ========================================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --bg-dark: #07090f;
+    --neon-cyan: #00f3ff;
+    --neon-purple: #9d00ff;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   2. ANIMATED BACKGROUND ORBS Made by Aniket Prajapati
+   ========================================== */
+
+
+.bg-orb {
+    position: fixed; border-radius: 50%; filter: blur(120px);
+    z-index: -1; animation: floatOrb 20s infinite alternate linear; opacity: 0.5;
+}
+
+.orb-1 { width: 400px; height: 400px; background: var(--neon-purple); top: -100px; left: -100px; }
+.orb-2 { width: 350px; height: 350px; background: var(--neon-cyan); bottom: -50px; right: -50px; animation-delay: -5s; }
+.orb-3 { width: 300px; height: 300px; background: rgba(0, 102, 255, 0.5); top: 40%; left: 40%; animation-delay: -10s; }
+
+@keyframes floatOrb {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-50px, -100px) scale(0.9); }
+}
+
+/* ==========================================
+   3. GLASSMORPHISM UTILITIES
+   ========================================== */
+.glass-nav, .glass-panel, .glass-card {
+    background: var(--glass-bg); backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border); border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================
+   4. NAVIGATION (Consistent across pages)
+   ========================================== */
+.navbar { background: rgba(7, 9, 15, 0.9) !important; backdrop-filter: blur(15px); }
+.navbar-brand.logo { font-weight: 800; font-size: 1.5rem; color: #fff !important; }
+.nav-link { 
+    color: var(--text-main) !important; font-weight: 500; transition: var(--transition);
+    position: relative;
+}
+.nav-link:hover, .nav-link.active { color: var(--neon-cyan) !important; }
+.nav-link.active::after {
+    content: ''; position: absolute; bottom: -5px; left: 0; width: 100%; height: 2px; background: var(--neon-cyan);
+}
+
+/* Mobile toggle */
+.navbar-toggler { border: none; color: #fff; }
+
+/* ==========================================
+   5. TYPOGRAPHY & HERO
+   ========================================== */
+.section-title { 
+    font-weight: 800; font-size: clamp(2rem, 5vw, 3rem); text-transform: uppercase; 
+    background: linear-gradient(to right, #fff, var(--neon-purple), var(--neon-cyan));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-size: 200% auto; animation: gradientText 5s linear infinite;
+}
+
+.about-hero { font-size: clamp(2.5rem, 7vw, 4rem); font-weight: 900; line-height: 1.1; }
+.greeting { color: var(--neon-purple); letter-spacing: 4px; font-size: 0.95rem; font-weight: 600; }
+.text-neon { color: var(--neon-cyan) !important; text-shadow: 0 0 10px rgba(0, 243, 255, 0.3); }
+
+@keyframes gradientText {
+    0%, 100% { background-position: 0% center; }
+    50% { background-position: 200% center; }
+}
+
+/* ==========================================
+   6. BUTTONS & INTERACTIVE ELEMENTS
+   ========================================== */
+.btn-neon, .btn-resume, .eye-btn {
+    background: transparent; color: var(--neon-cyan); border: 2px solid var(--neon-cyan);
+    padding: 12px 30px; font-weight: 600; border-radius: 50px; transition: var(--transition);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.1);
+}
+.btn-neon:hover, .eye-btn:hover { 
+    background: var(--neon-cyan); color: #000; transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0, 243, 255, 0.6);
+}
+
+.skill-pill, .resume-item span { 
+    padding: 12px 24px; border-radius: 50px; font-weight: 600; margin: 5px;
+    border: 1px solid var(--glass-border); transition: var(--transition);
+}
+.skill-pill:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0, 243, 255, 0.2); }
+
+/* ==========================================
+   7. CARDS & PROFILE
+   ========================================== */
+.tilt-card { max-width: 350px; transform-style: preserve-3d; }
+.profile-img-wrapper { 
+    width: 140px; height: 140px; border-radius: 50%; padding: 5px;
+    background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
+}
+.profile-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 4px solid var(--bg-dark); }
+
+.social-btn, .social-links a {
+    width: 45px; height: 45px; border-radius: 50%; background: rgba(255,255,255,0.05);
+    color: #fff; display: flex; align-items: center; justify-content: center;
+    text-decoration: none; transition: var(--transition); border: 1px solid var(--glass-border);
+}
+.social-btn:hover, .social-links a:hover { 
+    background: var(--neon-cyan); color: #000; transform: translateY(-5px); box-shadow: 0 0 20px var(--neon-cyan);
+}
+
+.resume-item { margin-bottom: 2rem; }
+.date { color: var(--neon-cyan); font-weight: 600; margin-bottom: 0.5rem; }
+
+/* ==========================================
+   8. SCROLL ANIMATIONS
+   ========================================== */
+.reveal {
+    opacity: 0; transform: translateY(50px); transition: all 0.8s ease-out;
+}
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* Pulse for icons */
+@keyframes pulseIcon { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
+
+/* ==========================================
+   9. FOOTER
+   ========================================== */
+.footer { background: var(--glass-bg); border-top: 1px solid var(--glass-border); }
+
+/* ==========================================
+   10. RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 768px) {
+    .hero { text-align: center !important; }
+    .section-title { font-size: 2rem; }
+    .navbar-nav { text-align: center; gap: 1rem; }
+    .timeline-card:hover, .skill-pill:hover { transform: none; }
+    .profile-img-wrapper { width: 120px; height: 120px; }
+}
+
+@media (max-width: 576px) {
+    .about-hero { font-size: 2rem; }
+    .btn-neon { padding: 10px 20px; font-size: 0.9rem; }
+    .glass-panel { padding: 1.5rem; margin-bottom: 1.5rem; }
+}
+
+/* Legacy browser fallback */
+@supports not (backdrop-filter: blur(20px)) {
+    .glass-nav, .glass-panel { background: rgba(7, 9, 15, 0.8); }
+}

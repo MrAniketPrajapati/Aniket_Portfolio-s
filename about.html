@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Aniket Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Glassmorphic Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html"><i class="fas fa-bolt text-neon"></i> Mr.Aniket Prajapati</a>
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars-staggered text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content with padding for fixed nav -->
+    <main class="min-vh-100 py-5 mt-5 position-relative">
+        <!-- Background Orbs -->
+        <div class="bg-orb orb-1"></div>
+        <div class="bg-orb orb-2"></div>
+
+        <div class="container reveal">
+            <div class="row align-items-center pt-5">
+                <div class="col-lg-8 pe-lg-5">
+                    <h1 class="about-hero title-gradient mb-4">I AM DevOps Engineer.</h1>
+                    <p class="about-text fs-5 text-light mb-5">
+                        Focused on designing scalable cloud solutions using Infrastructure as Code and CI/CD practices. 
+                        Skilled in Linux, Git, Docker, and cloud networking, with a strong emphasis on automation, security, 
+                        and high availability in modern cloud environments.
+                    </p>
+                </div>
+                <div class="col-lg-4 mt-5 mt-lg-0">
+                    <div class="glass-panel p-5 text-center">
+                        <div class="social-links d-flex flex-column gap-3 mb-5">
+                                <!-- Aniket Prajapati -->
+                            <a href="#" class="text-neon fw-semibold"><i class="fas fa-location-dot me-3"></i> Mumbai, India</a>
+                            <a href="https://github.com/MrAniketPrajapati" target="_blank" class="social-btn fs-4"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://www.linkedin.com/in/aniket-prajapati-aa8691347/" target="_blank" class="social-btn fs-4"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                            <a href="mailto:aniket.prajapati.638@gmail.com" class="social-btn fs-4"><i class="fas fa-envelope"></i> Email</a>
+                        </div>
+                        
+                        <button class="btn eye-btn w-100 rounded-pill" onclick="viewResume()">
+                            <i class="fas fa-eye me-2 pulse-icon"></i> View Full Resume
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4 text-center glass-panel border-top">
+        <div class="container">
+            <p class="mb-1 text-light">&copy; <span id="year"></span> Aniket Prajapati. All rights reserved.</p>
+            <p class="mb-0 text-muted small">Handcrafted with <i class="fas fa-heart text-neon mx-1"></i> and Code.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

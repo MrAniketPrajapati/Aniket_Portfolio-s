@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniket Portfolio</title>
+    <!-- Google Fonts: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
+
+    <!-- Animated Background Orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <!-- Glassmorphic Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html"><i class="fas fa-bolt text-neon"></i> Mr.Aniket Prajapati</a>
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars-staggered text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero d-flex align-items-center min-vh-100 position-relative pt-5">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+                
+                <!-- Left: Typography -->
+                <div class="col-lg-7 text-center text-lg-start mt-5 mt-lg-0 reveal">
+                    <p class="greeting mb-2">WELCOME TO MY WORLD</p>
+                    <h1 class="display-2 fw-bold title-gradient">Hi, I'm <br><span>Aniket Prajapati</span></h1>
+                    <h2 class="h3 fw-light mt-3 mb-4 text-light">
+                        <span class="typewriter"></span><span class="cursor">|</span>
+                    </h2>
+                    
+                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#experience" class="btn btn-neon rounded-pill">Explore Work</a>
+                        <a href="#skills" class="btn btn-outline-light rounded-pill px-4">My Skills</a>
+                    </div>
+                </div>
+
+                <!-- Right: 3D Floating Glass ID Card -->
+                <div class="col-lg-5 reveal delay-1">
+                    <div class="glass-card tilt-card mx-auto p-4 text-center">
+                        <div class="profile-img-wrapper mx-auto mb-3">
+                            <img src="assets/img 2.jpg" alt="Aniket Profile" class="profile-img">
+                        </div>
+                        <h3 class="fw-bold mb-1 text-white">Aniket Prajapati</h3>
+                        <p class="text-neon mb-3"><i class="fas fa-location-dot me-2"></i>India</p>
+                        
+                        <div class="social-links d-flex justify-content-center gap-3 mb-4">
+                            <a href="https://github.com/MrAniketPrajapati" target="_blank" class="social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/aniket-prajapati-aa8691347/" target="_blank" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+
+                        <!-- Eye Icon Resume Button -->
+                        <button class="btn btn-resume w-100 rounded-pill" onclick="viewResume()">
+                            <i class="fas fa-eye me-2 pulse-icon"></i> View Resume
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Aniket Prajapati -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 section-offset">
+        <div class="container reveal">
+            <h2 class="section-title text-center mb-5">Tech <span class="text-neon">Arsenal</span></h2>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <div class="skill-pill glass-panel"><i class="fab fa-html5 text-orange"></i> JAVA</div>
+                <div class="skill-pill glass-panel"><i class="fab fa-css3-alt text-blue"></i> AWS</div>
+                <div class="skill-pill glass-panel"><i class="fab fa-js text-yellow"></i> Cloud</div>
+                <div class="skill-pill glass-panel"><i class="fab fa-react text-cyan"></i> DevOps</div>
+                <div class="skill-pill glass-panel"><i class="fab fa-bootstrap text-purple"></i> Linux</div>
+                <div class="skill-pill glass-panel"><i class="fab fa-node-js text-green"></i> Networking</div>                     
+                <div class="skill-pill glass-panel"><i class="fas fa-database text-white"></i> CI/CD</div>
+                <div class="skill-pill glass-panel"><i class="fab fa-git-alt text-red"></i> Git & Docker</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5 section-offset">
+        <div class="container reveal">
+            <h2 class="section-title text-center mb-5">Work <span class="text-neon">Experience</span></h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="glass-panel p-4 mb-4 timeline-card">
+                        <div class="d-flex justify-content-between flex-wrap align-items-center mb-2">
+                            <h4 class="text-white fw-bold mb-0">IT Support Engineer</h4>
+                            <span class="badge bg-neon text-dark">2025 July - Present</span>
+                        </div>
+                        <h6 class="text-light mb-3"><i class="fas fa-building me-2 text-neon"></i>Indigital Technologies LLP.</h6>
+                        <p class="text-muted mb-0">• Provided IT support for hardware, software, and OS (Windows/macOS) issues.  <br>
+                                                   • Managed IT assets, system configurations, and company data. <br>  
+                                                   • Hands-on experience with AWS (EC2, S3, IAM, VPC, CloudWatch, CloudFront) and more. <br>  
+                                                   • Supported CI/CD processes and basic cloud operations. <br>
+                                                   • Handled networking tasks including IP management, firewall rules, and access control.</p>
+                    </div>
+                    <div class="glass-panel p-4 timeline-card">
+                        <div class="d-flex justify-content-between flex-wrap align-items-center mb-2">
+                            <h4 class="text-white fw-bold mb-0">Senioor Technical Support Engineer</h4>
+                            <span class="badge bg-neon text-dark">2024 - 2025</span>
+                        </div>
+                        <h6 class="text-light mb-3"><i class="fas fa-building me-2 text-neon"></i>Startup Hub</h6>
+                        <p class="text-muted mb-0">• Supported HP laptops, desktops, and printers for hardware and software issues. <br>
+                                                   • Performed OS installation and troubleshooting (Windows). <br>
+                                                   • Resolved networking, Wi-Fi, RAM, and hard disk-related issues.
+                                                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5 section-offset mb-5">
+        <div class="container reveal">
+            <h2 class="section-title text-center mb-5">My <span class="text-neon">Education</span></h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="glass-panel p-4 mb-4 timeline-card border-left-neon">
+                        <h4 class="text-white fw-bold">Bachelor of Computer Science</h4>
+                        <p class="text-neon fw-semibold mb-2"><i class="fas fa-graduation-cap me-2"></i>2021-2023 | Nagindas Khandwala College</p>
+                        <p class="text-muted">Specialized in Software Engineering & Full-Stack Development.</p>
+                    </div>
+                    <div class="glass-panel p-4 timeline-card border-left-neon">
+                        <h4 class="text-white fw-bold">Higher Secondary Education (MSBSHSE)</h4>
+                        <p class="text-neon fw-semibold mb-2"><i class="fas fa-graduation-cap me-2"></i>2018-2021 | Prakash College of Commerce and Science.</p>
+                        <p class="text-muted">Focused on Web Tech & Database Management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4 text-center glass-panel mt-5 border-top">
+        <div class="container">
+            <p class="mb-1 text-light">&copy; <span id="year"></span> Aniket Prajapati. All rights reserved.</p>
+            <p class="mb-0 text-muted small">Handcrafted with <i class="fas fa-heart text-neon mx-1"></i> and Code.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap & Custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

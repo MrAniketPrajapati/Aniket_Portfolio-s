@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Aniket Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Glassmorphic Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html"><i class="fas fa-bolt text-neon"></i> Mr.Aniket Prajapati</a>
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars-staggered text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="resume.html">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Resume Content -->
+    <main class="min-vh-100 py-5 mt-5 position-relative">
+        <!-- Background Orbs -->
+        <div class="bg-orb orb-1"></div>
+        <div class="bg-orb orb-3"></div>
+
+        <div class="container reveal">
+            <!-- Header -->
+            <div class="text-center mb-5 pt-5">
+                <h1 class="about-hero title-gradient mb-3">ANIKET'S RESUME</h1>
+                <button class="btn eye-btn rounded-pill px-5" onclick="viewResume()">
+                    <i class="fas fa-download me-2"></i> Download PDF
+                </button>
+            </div>
+
+            <div class="row g-5">
+                <!-- Left Column: Experience & Projects -->
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4">Experience</h2>
+                    <div class="resume-item glass-panel p-4 mb-4">
+                        <p class="date text-neon mb-2">2025 July - Present</p>
+                        <h3 class="text-white mb-2">IT Support Engineer</h3>
+                        <h6 class="text-light mb-3"><i class="fas fa-building me-2 text-neon"></i>Tech Corp</h6>
+                        <p class="text-muted">• Provided IT support for hardware, software, and OS (Windows/macOS) issues.  <br>
+                                                   • Managed IT assets, system configurations, and company data. <br>  
+                                                   • Hands-on experience with AWS (EC2, S3, IAM, VPC, CloudWatch, CloudFront) and more. <br>  
+                                                   • Supported CI/CD processes and basic cloud operations. <br>
+                                                   • Handled networking tasks including IP management, firewall rules, and access control.</p>
+                    </div>
+                    <div class="resume-item glass-panel p-4 mb-4">
+                        <p class="date text-neon mb-2">2024 - 2025</p>
+                        <h3 class="text-white mb-2">Senioor Technical Support Engineer</h3>
+                        <h6 class="text-light mb-3"><i class="fas fa-building me-2 text-neon"></i>Startup Lab</h6>
+                        <p class="text-muted">• Supported HP laptops, desktops, and printers for hardware and software issues. <br>
+                                                   • Performed OS installation and troubleshooting (Windows). <br>
+                                                   • Resolved networking, Wi-Fi, RAM, and hard disk-related issues.</p>
+                    </div>
+
+                    <h2 class="section-title mb-4">Projects</h2>
+                    <div class="glass-panel p-4">
+                        <h3 class="text-white mb-2">Portfolio Website</h3>
+                        <p class="text-muted mb-3">Modern glassmorphic portfolio with advanced animations and responsive design.</p>
+                        <a href="https://github.com" class="btn btn-outline-light btn-sm rounded-pill"><i class="fab fa-github me-2"></i> View Code</a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Education & Skills -->
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4">Education</h2>
+                    <div class="resume-item glass-panel p-4 mb-4 border-left-neon">
+                        <p class="date text-neon mb-2">2021 - 2023</p>
+                        <h3 class="text-white mb-2">Bachelor of Computer Science</h3>
+                        <p class="text-muted">Mumbai University • Graduated with Honors</p>
+                    </div>
+                    <div class="resume-item glass-panel p-4 mb-4 border-left-neon">
+                        <p class="date text-neon mb-2">2018 - 2021</p>
+                        <h3 class="text-white mb-2">Higher Secondary Education (MSBSHSE)</h3>
+                        <p class="text-muted">Prakash College of Commerce and Science.</p>
+                    </div>
+
+                    <h2 class="section-title mb-4">Expertise</h2>
+                    <div class="glass-panel p-4">
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="skill-pill text-orange">JAVA</span>
+                            <span class="skill-pill text-yellow">AWS</span>
+                            <span class="skill-pill text-cyan">Cloud</span>
+                            <span class="skill-pill text-purple">DevOps</span>
+                            <span class="skill-pill text-green">Linux</span>
+                            <span class="skill-pill text-white">Networking</span>
+                            <span class="skill-pill text-red">CI/CD</span>
+                            <span class="skill-pill text-neon">Git & Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4 text-center glass-panel border-top">
+        <div class="container">
+            <p class="mb-1 text-light">&copy; <span id="year"></span> Aniket Prajapati. All rights reserved.</p>
+            <p class="mb-0 text-muted small">Handcrafted with <i class="fas fa-heart text-neon mx-1"></i> and Code.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
